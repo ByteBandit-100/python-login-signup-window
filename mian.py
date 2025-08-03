@@ -1,23 +1,22 @@
-import json
 import tkinter as tk
 import json as js
-from threading import active_count
 from tkinter.messagebox import showinfo
 
 # defining function to write/append details while creating account
-def write_to_db(data,labs,vars):
+def write_to_db(data,labels,variables):
     try:
-        for i in range(len(labs)):
-            data[labs[i]] = vars[i].get()
+        for i in range(len(labels)):
+            data[labels[i]] = variables[i].get()
         file_data = None
         try:
             with open('database.json', 'r') as f:
-                file_data = json.load(f)
-        except (FileNotFoundError,json.JSONDecodeError):
+                file_data = js.load(f)
+        except (FileNotFoundError,js.JSONDecodeError):
             file_data = []
         file_data.append(data)
         with open('database.json', 'w') as f:
-            json.dump(file_data, f, indent=4)
+            js.dump(file_data, f, indent=4)
+        showinfo(title='Account Created',message='Accounted Created Successfully.')
     except Exception as e:
         print(f'An error occurred: {e}')
 
@@ -49,11 +48,11 @@ def create_signup(d_frame):
     # login_btn
     tk.Button(signup_frame, text='Login', padx=10, pady=3, relief='groove', overrelief='ridge', bd=3, width=48, command=lambda : create_login(1,signup_frame)).grid(row=6, column=0, sticky='e', columnspan=2, pady=5)
 
-# defining functionfor read data from database.json
+# defining function for read data from database.json
 def read_from_db(u_name,psd,login_frame):
     try:
         with open('database.json','r') as f:
-            file_data = json.load(f)
+            file_data = js.load(f)
             temp = 0
             for dict_d in file_data:
                 for widget in login_frame.winfo_children():
@@ -67,8 +66,8 @@ def read_from_db(u_name,psd,login_frame):
                 temp = 1
             if temp:
                 tk.Label(login_frame, text='No Credentials exist.', fg='red',font=('sans-serif', 8)).grid(row=5, column=0,columnspan=2,sticky='w')
-    except:
-        print('error')
+    except Exception as e:
+        print(f'An error occurred {e}')
 
 # defining function for login page
 def create_login(init = 0,s_frame=None):
@@ -96,8 +95,9 @@ def create_login(init = 0,s_frame=None):
         sign_up_btn = tk.Button(login_frame, text='Create account', padx=10, pady=3, relief='groove', overrelief='ridge', bd=3,width=48,command=lambda : create_signup(login_frame))
         sign_up_btn.grid(row=4, column=0, sticky='e', columnspan=2, pady=2)
 
-root = tk.Tk()
-root.geometry('700x550')
-root.iconbitmap('./login.ico')
-create_login()
-root.mainloop()
+if __name__ == '__main__':
+    root = tk.Tk()
+    root.geometry('700x550')
+    root.iconbitmap('./login.ico')
+    create_login()
+    root.mainloop()
