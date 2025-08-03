@@ -10,6 +10,17 @@ This python program is based on gui (tkinter) and handles database json file.<br
 | :---:|
 |<img width="853" height="703" alt="Screenshot 2025-08-03 131449" src="https://github.com/user-attachments/assets/03ccf3ef-154a-456d-a99b-77dcfdd1daa0" />|
 
+<table>
+  <tr>
+    <td align="center"><b>No credentials exist state</b><br><img width="855" height="713" alt="Screenshot 2025-08-03 131257" src="https:                                                                                  
+    <td align="center"><b>Account Create State</b><br><img width="859" height="692" alt="Screenshot 2025-08-03 131416" src="https://github.com/user-attachments/assets/601dce02-7631-4a5a-a5a5-3420c43b97d5" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><b>Login successfully state</b><br><img width="853" height="703" alt="Screenshot 2025-08-03 131449" src="https://github.com/user-attachments/assets/03ccf3ef-154a-456d-a99b-77dcfdd1daa0" /></td>
+  </tr>
+</table>
+
+
 ## Installation
 
 To use this application, you will need to have Python 3 installed on your system. You can download the latest version of Python from the official website: [https://www.python.org/downloads/](https://www.python.org/downloads/).
