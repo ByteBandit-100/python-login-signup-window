@@ -38,7 +38,7 @@ To test the application, you can follow these steps:
 1. Run the `main.py` file as described in the "Usage" section.
 2. Create a new account by clicking the "Create account" button and filling in the required information.
 3. Verify that the account is successfully created by checking the `database.json` file in the project directory. You should see the new user's information added to the file.
-4. Log out and try to log in with the newly created account. Ensure that the login process works as expected and that you are able to see the success message.
+4. Log in with the newly created account. Ensure that the login process works as expected and that you are able to see the success message.
 5. Try to log in with incorrect credentials and verify that the error message is displayed correctly.
 
-If you encounter any issues or have any questions, please feel free to reach out to the project maintainers.
+If you encounter any issues or have any questions, please feel free to reach out me.
