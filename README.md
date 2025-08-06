@@ -24,7 +24,7 @@ The application provides a simple login and signup window for user authenticatio
 2. Run the `main.py` file using the following command:
 
    ```
-   python mian.py
+   python main.py
    ```
 
 3. The login window will appear. If you don't have an account, click on the "Create account" button to sign up.
@@ -35,7 +35,7 @@ The application provides a simple login and signup window for user authenticatio
 
 To test the application, you can follow these steps:
 
-1. Run the `mian.py` file as described in the "Usage" section.
+1. Run the `main.py` file as described in the "Usage" section.
 2. Create a new account by clicking the "Create account" button and filling in the required information.
 3. Verify that the account is successfully created by checking the `database.json` file in the project directory. You should see the new user's information added to the file.
 4. Log in with the newly created account. Ensure that the login process works as expected and that you are able to see the success message.
